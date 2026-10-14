@@ -1,0 +1,53 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Sign in with the email and password you use in the Hatch Sleep app.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate integration",
+        "description": "Hatch rejected the password for {email}. Enter the current password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Account is already configured",
+      "reauth_successful": "Re-authentication was successful"
+    }
+  },
+  "entity": {
+    "light": {
+      "night_light": {
+        "name": "Night light",
+        "state_attributes": {
+          "effect": {
+            "state": {
+              "rainbow": "Rainbow"
+            }
+          }
+        }
+      }
+    },
+    "media_player": {
+      "sound": {
+        "name": "Sound"
+      }
+    },
+    "switch": {
+      "power": {
+        "name": "Power"
+      }
+    }
+  }
+}

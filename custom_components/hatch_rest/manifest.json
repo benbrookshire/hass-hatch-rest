@@ -1,0 +1,13 @@
+{
+  "domain": "hatch_rest",
+  "name": "Hatch Rest",
+  "codeowners": ["@benbrookshire"],
+  "config_flow": true,
+  "documentation": "https://github.com/benbrookshire/hass-hatch-rest",
+  "integration_type": "hub",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/benbrookshire/hass-hatch-rest/issues",
+  "loggers": ["custom_components.hatch_rest"],
+  "requirements": ["paho-mqtt>=2.1.0"],
+  "version": "0.1.0"
+}

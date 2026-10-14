@@ -1,0 +1,29 @@
+[project]
+name = "hass-hatch-rest"
+version = "0.1.0"
+description = "Home Assistant integration for Hatch Rest/Restore WiFi sound machines"
+requires-python = ">=3.13"
+
+[dependency-groups]
+dev = [
+  "pytest-homeassistant-custom-component",
+  "paho-mqtt>=2.1.0",
+  "ruff",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF012"]  # HA entities declare _attr_* lists as class attributes
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+known-first-party = ["custom_components"]
+combine-as-imports = true

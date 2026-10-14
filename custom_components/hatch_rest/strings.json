@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Sign in with the email and password you use in the Hatch Sleep app.",
+        "data": {
+          "email": "[%key:common::config_flow::data::email%]",
+          "password": "[%key:common::config_flow::data::password%]"
+        }
+      },
+      "reauth_confirm": {
+        "title": "[%key:common::config_flow::title::reauth%]",
+        "description": "Hatch rejected the password for {email}. Enter the current password.",
+        "data": {
+          "password": "[%key:common::config_flow::data::password%]"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_account%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+    }
+  },
+  "entity": {
+    "light": {
+      "night_light": {
+        "name": "Night light",
+        "state_attributes": {
+          "effect": { "state": { "rainbow": "Rainbow" } }
+        }
+      }
+    },
+    "media_player": {
+      "sound": { "name": "Sound" }
+    },
+    "switch": {
+      "power": { "name": "Power" }
+    }
+  }
+}
